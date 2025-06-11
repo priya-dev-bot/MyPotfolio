@@ -1,6 +1,9 @@
 Welcome to my personal portfolio website!
 This project showcases my design journey, skills, projects, and experiences as a UI/UX Designer — built using HTML, CSS, and JavaScript with a creative dark/light mode experience.
 
+#Live demo
+https://priya-dev-bot.github.io/MyPotfolio/
+
 🌟 Features
 🎨 Modern & responsive UI/UX portfolio
 
@@ -44,27 +47,7 @@ Edit
 📄 README.md
 📄 Priyanka_Resume.pdf
 🛠️ Setup Instructions
-Clone the repository
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/portfolio-priyanka.git
-cd portfolio-priyanka
-Open index.html in your browser
-Or launch with Live Server if using VS Code.
-
-Customize content
-Replace links, image paths, and text with your updated information.
-
-🖥️ Deployment
-You can deploy this portfolio easily on:
-
-Netlify
-
-Vercel
-
-GitHub Pages
 
 🙋‍♀️ About Me
 Priyanka Chetan Jatoliya

@@ -12,23 +12,32 @@
 
 </head>
 <body>
-  <div id="preloader">Loading...</div>
+  
+<div class="glass-effect"></div>
+
 
   <header class="glass-header">
   <nav>
     <h1>Priyanka</h1>
+
+    <!-- Hamburger icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <ul id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li>
-        <button id="toggle-theme" class="theme-toggle">🌓</button>
-      </li>
+      <li><button id="toggle-theme" class="theme-toggle">🌓</button></li>
     </ul>
   </nav>
 </header>
+
 
 
   <section id="home">
@@ -53,42 +62,58 @@
 
   <section id="about">
   <h2>About Me</h2>
-  <p>I’m a passionate UI/UX designer with a strong eye for colors, visual balance, and playful design...</p>
+  
+  <div class="about-wrapper">
+    <div class="profile-image-container" data-aos="fade-right">
+    <img 
+  src="profile.jpg" 
+  alt="Priyanka" 
+  style="
+  
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(250, 204, 21, 0.4);
+    box-shadow: 0 0 25px rgba(250, 204, 21, 0.2), 0 0 50px rgba(255, 255, 255, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 1rem;
+    display: block;
+  " 
+  onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 35px rgba(250,204,21,0.4)'"
+  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 25px rgba(250,204,21,0.2), 0 0 50px rgba(255,255,255,0.08)'"
+/>
+</div>
 
-  <div class="skills-container">
-    <!-- Soft Skills -->
-    <details open class="skill-box">
-      <summary>🧠 Soft Skills</summary>
-      <ul class="skills-list">
-        <li>🎨 Creative Thinker</li>
-        <li>🎯 Color Psychology</li>
-        <li>🧠 Empathy for Users</li>
-        <li>📱 Responsive Design</li>
-        <li>💬 Communication</li>
-      </ul>
-    </details>
+    <!-- Left: Description -->
+    <div class="about-text">
+      <p>
+        I’m a creative and empathetic UI/UX designer with a strong eye for colors,
+        layout harmony, and user behavior. I enjoy transforming complex challenges
+        into beautiful, intuitive, and functional designs.
+      </p>
+    </div>
 
-    <!-- Technical Skills -->
-    <details open class="skill-box">
-      <summary>🛠️ Technical Skills</summary>
-      <div class="tech-icons">
-        <img src="html-5.png" alt="HTML" />
-        <img src="css-3.png" alt="CSS" />
-        <img src="js.png" alt="JavaScript" />
-        <img src="java.png" alt="Java" />
-        <img src="c.png" alt="C++" />
-        <img src="python.png" alt="python" />
-        <img src="sql-server.png" alt="SQL" />
-        <img src="mysql.png" alt="MySQL" />
-        <img src="figma.png" alt="Figma" />
-        <img src="canva-logo.png" alt="Canva" />
-        <img src="vs-logo.png" alt="visual Studio" />
-        <img src="mongodb-logo.png" alt="GitHub" />
-      </div>
-    </details>
+    <!-- Right: Technical Skills -->
+    <div class="skills-grid">
+      <div class="skill-card"><img src="html-5.png" alt="HTML"><span>HTML</span></div>
+      <div class="skill-card"><img src="css-3.png" alt="CSS"><span>CSS</span></div>
+      <div class="skill-card"><img src="js.png" alt="JavaScript"><span>JavaScript</span></div>
+      <div class="skill-card"><img src="java.png" alt="Java"><span>Java</span></div>
+      <div class="skill-card"><img src="c.png" alt="C++"><span>C++</span></div>
+      <div class="skill-card"><img src="python.png" alt="Python"><span>Python</span></div>
+      <div class="skill-card"><img src="sql-server.png" alt="SQL"><span>SQL</span></div>
+      <div class="skill-card"><img src="mysql.png" alt="MySQL"><span>MySQL</span></div>
+      <div class="skill-card"><img src="figma.png" alt="Figma"><span>Figma</span></div>
+      <div class="skill-card"><img src="canva-logo.png" alt="Canva"><span>Canva</span></div>
+      <div class="skill-card"><img src="vs-logo.png" alt="VS Code"><span>VS Code</span></div>
+      <div class="skill-card"><img src="mongodb-logo.png" alt="MongoDB"><span>MongoDB</span></div>
+    </div>
   </div>
-
 </section>
+
 
 <div class="wave-bg"></div>
 
@@ -266,6 +291,14 @@
 </div>
 
 
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+</script>
 
 
 

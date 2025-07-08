@@ -126,6 +126,7 @@ nav ul li a:hover {
 
 
 
+
 /* Hamburger (hidden on large screens) */
 .menu-toggle {
   display: none;
@@ -142,9 +143,8 @@ nav ul li a:hover {
   width: 100%;
   background: #facc15;
   border-radius: 3px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
-
 /* Responsive nav styles */
 @media (max-width: 768px) {
   nav {
@@ -697,6 +697,112 @@ footer {
     text-align: center;
   }
 }
+
+
+
+
+/*certifications section*/
+#certifications {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  background: radial-gradient(circle at top, #16161a, #0c0c0f);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(250, 204, 21, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Certification Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e5e7eb;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.15);
+}
+
+.cert-card h3 {
+  color: #facc15;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cert-org {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Background Glows */
+#certifications::before,
+#certifications::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+#certifications::before {
+  top: -120px;
+  left: -100px;
+  width: 400px;
+  height: 300px;
+  background: #facc15;
+}
+
+#certifications::after {
+  bottom: -120px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: #38bdf8;
+}
+
+/* Small Screen Optimization */
+@media (max-width: 600px) {
+  .cert-card {
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+
+  .cert-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .cert-card p {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 
